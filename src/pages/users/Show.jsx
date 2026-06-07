@@ -68,14 +68,14 @@ export default function Show() {
         <div className="grid grid-cols-3 gap-2 mt-4">
           <div className="flex-all-center col-span-1">
             {user.photo ? (
-              <img src={user.photo} alt="" className="flex w-36 h-36 mx-2" />
+              <img src={user.photo} alt="" className="flex w-36 mx-2" />
             ) : (
               <Svg title="Profile" c={"w-36 fill-current mx-2"}>
                 <ProfileSvg />
               </Svg>
             )}
           </div>
-          <div className="col-span-2 texl-lg">
+          <div className=" border rounded-xl p-2 col-span-2 texl-lg w-120 h-60">
             <div className="flex w-full p-1">
               <label className="flex w-32">Nama</label>
               <label>:</label>

@@ -5,7 +5,7 @@ function Dashboard() {
 
   return (
     <>
-      <div className="flex w-full justify-center items-center p-6">
+      <div className="flex w-full justify-center items-center p-2">
         <label>Welcome {user.name}</label>
       </div>
     </>

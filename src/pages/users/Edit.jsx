@@ -195,11 +195,7 @@ export default function Edit() {
               <div>
                 <div className="flex-all-center">
                   {photoPreview ? (
-                    <img
-                      src={photoPreview}
-                      alt=""
-                      className="flex w-36 h-36 mx-2"
-                    />
+                    <img src={photoPreview} alt="" className="flex w-36 mx-2" />
                   ) : (
                     <Svg title="Profile" c={"w-36 fill-current mx-2"}>
                       <ProfileSvg />
@@ -237,14 +233,14 @@ export default function Edit() {
                 )}
               </div>
             </div>
-            <div className="col-span-2">
-              <div className="flex items-center mt-4">
+            <div className="col-span-2 w-120 h-80 border rounded-xl p-2">
+              <div className="flex items-center">
                 <label className="w-44">Nama</label>
                 <input
                   type="text"
                   name="name"
                   className="flex p-2 h-8 w-72"
-                  placeholder="Nama Lengkap"
+                  placeholder="Input Nama Lengkap"
                   autoComplete="off"
                   ref={nameRef}
                   onChange={handleChange}
@@ -268,7 +264,7 @@ export default function Edit() {
                 <label className="w-44">Username</label>
                 <input
                   type="text"
-                  name="username"
+                  name="Input username"
                   className="flex p-2 h-8 w-72"
                   placeholder="Username"
                   autoComplete="off"
@@ -295,7 +291,7 @@ export default function Edit() {
                   type="text"
                   name="phone"
                   className="flex p-2 h-8 w-72"
-                  placeholder="Nomor Handphone"
+                  placeholder="Input Nomor Hp."
                   autoComplete="off"
                   onChange={handleChange}
                   defaultValue={editUser.phone}
@@ -320,7 +316,7 @@ export default function Edit() {
                   type="text"
                   name="email"
                   className="flex p-2 h-8 w-72"
-                  placeholder="Email"
+                  placeholder="Input email"
                   autoComplete="off"
                   onChange={handleChange}
                   defaultValue={editUser.email}
@@ -364,7 +360,7 @@ export default function Edit() {
                       type="password"
                       name="oldPassword"
                       className="flex p-2 h-8 w-72"
-                      placeholder="Old Password"
+                      placeholder="Input password lama"
                       onChange={handleChange}
                       required
                     />
@@ -397,7 +393,7 @@ export default function Edit() {
                     type="password"
                     name="password"
                     className="flex p-2 h-8 w-72"
-                    placeholder="New Password"
+                    placeholder="Input password baru"
                     onChange={handleChange}
                     required
                   />

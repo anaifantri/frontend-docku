@@ -64,10 +64,7 @@ const Edit = () => {
   }, []);
 
   const handleChange = (e) => {
-    // setGetData((prevGetData) => ({
-    //   ...prevGetData,
-    //   [e.target.name]: e.target.value,
-    // }));
+    setShippingNumber(e.target.value);
   };
 
   // Fungsi yang dipicu setiap kali kamera menangkap frame baru
@@ -77,7 +74,6 @@ const Edit = () => {
       setStopScan(true);
       setScan(false);
       setIsModalOpen(false);
-      console.log(result.text);
     } else {
       if (err && err.name !== "NotFoundException") {
         // console.log("Error pemindaian:", err);
@@ -160,7 +156,7 @@ const Edit = () => {
         setProcessing(false);
       }
     },
-    [recordedChunks, documentation],
+    [recordedChunks, documentation, shippingNumber],
   );
 
   const handleButtonScan = () => {

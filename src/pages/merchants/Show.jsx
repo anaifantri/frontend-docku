@@ -68,11 +68,7 @@ export default function Show() {
         <div className="grid grid-cols-3 gap-2 mt-4">
           <div className="flex-all-center col-span-1">
             {merchant.logo ? (
-              <img
-                src={merchant.logo}
-                alt=""
-                className="flex rounded-full w-36 mx-2"
-              />
+              <img src={merchant.logo} alt="" className="flex w-36 mx-2" />
             ) : (
               <Svg title="Profile" c={"w-36 fill-current mx-2"}>
                 <ImageSvg />

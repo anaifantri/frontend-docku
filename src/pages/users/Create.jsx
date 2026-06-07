@@ -143,11 +143,7 @@ export default function Create() {
               <div>
                 <div className="flex-all-center">
                   {photoPreview ? (
-                    <img
-                      src={photoPreview}
-                      alt=""
-                      className="flex w-36 h-36 mx-2"
-                    />
+                    <img src={photoPreview} alt="" className="flex w-36 mx-2" />
                   ) : (
                     <Svg title="Profile" c={"w-36 fill-current mx-2"}>
                       <ProfileSvg />
@@ -185,15 +181,15 @@ export default function Create() {
                 )}
               </div>
             </div>
-            <div className="flex-all-center col-span-2">
+            <div className="flex w-120 h-80 p-2 border rounded-xl col-span-2">
               <div>
-                <div className="flex items-center mt-4">
+                <div className="flex items-center">
                   <label className="w-44">Nama</label>
                   <input
                     type="text"
                     name="name"
                     className="flex p-2 h-8 w-72"
-                    placeholder="Nama Lengkap"
+                    placeholder="Input Nama Lengkap"
                     autoComplete="off"
                     ref={nameRef}
                     onChange={handleChange}
@@ -219,7 +215,7 @@ export default function Create() {
                     type="text"
                     name="username"
                     className="flex p-2 h-8 w-72"
-                    placeholder="username"
+                    placeholder="Input username"
                     autoComplete="off"
                     onChange={handleChange}
                     // value={formData.username}
@@ -245,7 +241,7 @@ export default function Create() {
                     type="password"
                     name="password"
                     className="flex p-2 h-8 w-72"
-                    placeholder="Password"
+                    placeholder="Input Password"
                     onChange={handleChange}
                     required
                   />
@@ -283,7 +279,7 @@ export default function Create() {
                     type="text"
                     name="phone"
                     className="flex p-2 h-8 w-72"
-                    placeholder="Nomor Handphone"
+                    placeholder="Input Nomor Hp."
                     autoComplete="off"
                     onChange={handleChange}
                     required
@@ -308,7 +304,7 @@ export default function Create() {
                     type="email"
                     name="email"
                     className="flex p-2 h-8 w-72"
-                    placeholder="Email"
+                    placeholder="Input email"
                     autoComplete="off"
                     onChange={handleChange}
                     required

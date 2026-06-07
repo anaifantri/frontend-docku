@@ -116,11 +116,7 @@ export default function Create() {
               <div>
                 <div className="flex-all-center">
                   {logoPreview ? (
-                    <img
-                      src={logoPreview}
-                      alt=""
-                      className="flex w-36 h-36 mx-2"
-                    />
+                    <img src={logoPreview} alt="" className="flex w-36 mx-2" />
                   ) : (
                     <Svg title="Profile" c={"w-36 fill-current mx-2"}>
                       <ImageSvg />

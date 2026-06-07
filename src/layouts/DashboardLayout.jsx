@@ -28,7 +28,7 @@ export default function DashboardLayout() {
     <>
       <HeaderLayout />
       <main>
-        <div className="flex w-full min-h-screen justify-center p-4 text-sm bg-teal-50 z-0">
+        <div className="flex w-full min-h-screen justify-center p-2 text-sm bg-teal-50 z-0">
           {user && !user.email_verified_at ? (
             <div className="text-red-700 text-xs">
               <div className="flex-all-center">

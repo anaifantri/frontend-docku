@@ -29,6 +29,7 @@ function Tracking() {
 
   const handleChange = (e) => {
     setShippingNumber(e.target.value);
+    console.log(e.target.value);
   };
 
   const handleTracking = async () => {
@@ -37,7 +38,7 @@ function Tracking() {
       shippingNumberRef.current.focus();
     } else {
       try {
-        // let objectUrl = "";
+        console.log(shippingNumber);
         setLoading(true);
         const response = await api.get(
           "/api/documentations/tracking/" + shippingNumber,
@@ -48,9 +49,6 @@ function Tracking() {
           },
         );
         setDocumentation(response.data);
-        // const videoBlob = new Blob([response.data.video]);
-        // objectUrl = URL.createObjectURL(videoBlob);
-        // setVideoUrl(objectUrl);
         setLoading(false);
       } catch (err) {
         if (!err?.response) {
@@ -59,6 +57,7 @@ function Tracking() {
           setError("Unauthorized..!!");
         } else {
           setError(err.response.data.message);
+          console.log(err.response.data.message);
         }
       } finally {
         setLoading(false);
@@ -107,11 +106,10 @@ function Tracking() {
               <input
                 className="ml-2 px-2 w-48"
                 type="text"
-                // name="shipping_number"
                 onChange={handleChange}
                 ref={shippingNumberRef}
-                placeholder="Input / Resi"
-                value={shippingNumber}
+                placeholder="Input / Scan Resi"
+                defaultValue={shippingNumber}
               />
               <BtnScan action={handleButtonScan} />
               <BtnSearch action={handleTracking} />

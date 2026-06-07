@@ -14,6 +14,7 @@
     "axios": "^1.16.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-hover-video-player": "^10.0.2",
     "react-qr-barcode-scanner": "^2.1.25",
     "react-router-dom": "^7.15.1",
     "react-webcam": "^7.2.0",
